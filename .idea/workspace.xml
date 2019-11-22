@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fdb429cf-5fdc-4cee-9f8e-29f0979ae31d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Online_Sales$jjj.coverage" NAME="jjj Coverage Results" MODIFIED="1558770973686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/os_agent" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Online_Sales" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>contact</find>
+      <find>rgtstyle</find>
+      <find>place</find>
+      <find>login</find>
+      <find>no blocked</find>
+      <find>client.obj</find>
+      <find>os_client_property_block</find>
+      <find>he</find>
+      <find>height</find>
+      <find>save</find>
+      <find>update</find>
+      <find>block</find>
+      <find>uname</find>
+      <find>20</find>
+      <find>;</find>
+      <find>ws</find>
+      <find>home</find>
+      <find>99</find>
+      <find>Jeevansathi.com</find>
+      <find>Naukri.com</find>
+      <find>os_client_home</find>
+      <find>margin</find>
+      <find>hei</find>
+      <find>welcom</find>
+      <find>sold</find>
+      <find>os_agent_welcome_page</find>
+      <find>table-la</find>
+      <find>os_admin_agent_up</find>
+      <find>delete</find>
+      <find>os_agent_we</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>rgtstyle</replace>
+      <replace>registration</replace>
+      <replace>www.sathyatech.com</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Q5nVHgiyqR8CnbfSoLI3ZbXSU1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/os_main/static/property" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales1\os_main" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales\os_main\static\css" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales\os_main\static\images" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales\os_main\static" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales\os_main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sangishetti sridhar\Downloads\onlineplotsales\os_main\static\property" />
+      <recent name="C:\Users\sangishetti sridhar\Downloads\Online_Sales-master\os_main\static\images" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales1\os_main\static\images" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales1\os_main\static\client" />
+      <recent name="C:\Users\sangishetti sridhar\PycharmProjects\Online_Sales\os_main\static\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.onlineplotsales">
+    <configuration name="facerecognisation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Online_Sales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Online_Sales" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Online_Sales/facerecognisation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jjj" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Online_Sales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/os_agent" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/os_agent/jjj.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Online_Sales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/static" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/static/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Online_Sales" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Online_Sales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Online_Sales.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="onlineplotsales" type="Python.DjangoServer" factoryName="Django server">
+      <module name="onlineplotsales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Online_Sales.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.facerecognisation" />
+        <item itemvalue="Python.jjj" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdb429cf-5fdc-4cee-9f8e-29f0979ae31d" name="Default Changelist" comment="" />
+      <created>1558028598038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558028598038</updated>
+      <workItem from="1558028603117" duration="6113000" />
+      <workItem from="1558071372260" duration="631000" />
+      <workItem from="1558114391692" duration="5388000" />
+      <workItem from="1558154326739" duration="11176000" />
+      <workItem from="1558168704708" duration="678000" />
+      <workItem from="1558183764894" duration="2569000" />
+      <workItem from="1558363211558" duration="616000" />
+      <workItem from="1558372217116" duration="755000" />
+      <workItem from="1558415691605" duration="290000" />
+      <workItem from="1558442042233" duration="460000" />
+      <workItem from="1558442988491" duration="7080000" />
+      <workItem from="1558457809527" duration="13120000" />
+      <workItem from="1558516767404" duration="1244000" />
+      <workItem from="1558535864223" duration="2759000" />
+      <workItem from="1558632048307" duration="3481000" />
+      <workItem from="1558682799766" duration="12855000" />
+      <workItem from="1558702073917" duration="6340000" />
+      <workItem from="1558717389453" duration="11369000" />
+      <workItem from="1558774950281" duration="25217000" />
+      <workItem from="1558859724632" duration="12174000" />
+      <workItem from="1558890260410" duration="1543000" />
+      <workItem from="1558961449810" duration="8963000" />
+      <workItem from="1559022948642" duration="15057000" />
+      <workItem from="1559047574267" duration="294000" />
+      <workItem from="1559048362482" duration="2304000" />
+      <workItem from="1559097734065" duration="34257000" />
+      <workItem from="1559280807562" duration="985000" />
+      <workItem from="1559639802732" duration="406000" />
+      <workItem from="1560771944073" duration="10593000" />
+      <workItem from="1560846159175" duration="10207000" />
+      <workItem from="1560863070812" duration="6073000" />
+      <workItem from="1560913185659" duration="19698000" />
+      <workItem from="1560938516205" duration="5358000" />
+      <workItem from="1560945088896" duration="3857000" />
+      <workItem from="1560958244306" duration="2286000" />
+      <workItem from="1561001703597" duration="11540000" />
+      <workItem from="1561016553021" duration="9235000" />
+      <workItem from="1561029314708" duration="5601000" />
+      <workItem from="1561084615080" duration="18240000" />
+      <workItem from="1561107557398" duration="17197000" />
+      <workItem from="1561133090729" duration="605000" />
+      <workItem from="1561173870856" duration="30884000" />
+      <workItem from="1561261649432" duration="15917000" />
+      <workItem from="1561345015929" duration="22756000" />
+      <workItem from="1561372425931" duration="4475000" />
+      <workItem from="1561444284982" duration="15077000" />
+      <workItem from="1561464760579" duration="19436000" />
+      <workItem from="1561536802534" duration="10488000" />
+      <workItem from="1561552139239" duration="11000" />
+      <workItem from="1561552212009" duration="6379000" />
+      <workItem from="1567069354224" duration="5589000" />
+      <workItem from="1567096584418" duration="2348000" />
+      <workItem from="1567099077703" duration="391000" />
+      <workItem from="1567156776919" duration="7877000" />
+      <workItem from="1567249093659" duration="14610000" />
+      <workItem from="1567270189382" duration="4877000" />
+      <workItem from="1567353941153" duration="6600000" />
+      <workItem from="1567394360739" duration="6645000" />
+      <workItem from="1569743665958" duration="11834000" />
+      <workItem from="1574162712529" duration="1042000" />
+      <workItem from="1574225266988" duration="29000" />
+      <workItem from="1574414187214" duration="3880000" />
+    </task>
+    <task id="LOCAL-00001" summary="changes added">
+      <created>1567355879608</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355879608</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added client register html page">
+      <created>1567356038325</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567356038325</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added client register html page">
+      <created>1567357005595</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567357006240</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added client click here button">
+      <created>1567357648160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567357648160</updated>
+    </task>
+    <task id="LOCAL-00005" summary="successfully completed register and login page">
+      <created>1567360598411</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567360598411</updated>
+    </task>
+    <task id="LOCAL-00006" summary="successfully completed register and login page with urls">
+      <created>1567361153334</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361153334</updated>
+    </task>
+    <task id="LOCAL-00007" summary="uploaded gif files">
+      <created>1567396370648</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567396370648</updated>
+    </task>
+    <task id="LOCAL-00008" summary="title font changed">
+      <created>1567397046985</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567397046985</updated>
+    </task>
+    <task id="LOCAL-00009" summary="In admin main footer template deleted">
+      <created>1567398100084</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567398100084</updated>
+    </task>
+    <task id="LOCAL-00010" summary="cilent details font color changed">
+      <created>1567398401673</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567398401673</updated>
+    </task>
+    <task id="LOCAL-00011" summary="cilent details font color changed">
+      <created>1567398854084</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1567398854084</updated>
+    </task>
+    <task id="LOCAL-00012" summary="all coomited last &amp; final">
+      <created>1567400780005</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567400780005</updated>
+    </task>
+    <task id="LOCAL-00013" summary="all coomited last &amp; final">
+      <created>1567400902595</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567400902595</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes added" />
+    <MESSAGE value="added client register html page" />
+    <MESSAGE value="added client click here button" />
+    <MESSAGE value="successfully completed register and login page" />
+    <MESSAGE value="successfully completed register and login page with urls" />
+    <MESSAGE value="uploaded gif files" />
+    <MESSAGE value="title font changed" />
+    <MESSAGE value="In admin main footer template deleted" />
+    <MESSAGE value="cilent details font color changed" />
+    <MESSAGE value="all coomited last &amp; final" />
+    <option name="LAST_COMMIT_MESSAGE" value="all coomited last &amp; final" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/os_agent/urls.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Online_Sales$facerecognisation.coverage" NAME="facerecognisation Coverage Results" MODIFIED="1567157109119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Online_Sales" />
+    <SUITE FILE_PATH="coverage/Online_Sales$test.coverage" NAME="test Coverage Results" MODIFIED="1567266707476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/static" />
+  </component>
+</project>

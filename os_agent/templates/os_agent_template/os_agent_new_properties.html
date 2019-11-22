@@ -1,0 +1,159 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Properties</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+        <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_agent_template/os_agent_menu.html' %}
+        <br>
+        <span style="font-size: 25px; text-align: center;display: block;color: springgreen;">
+            <table align="center" style="background: crimson">
+            <tr>
+                <th>
+                    Welcome Agent:
+                    {% for x in data1 %}
+                        {{ x.ag_name }}
+                        <th>
+                            {% if x.ag_photo  %}
+                            <img src="{{ x.ag_photo.url }}" height="50px" width="65px">
+                            {% endif %}
+                        </th>
+                    {% endfor %}
+                </th>
+            </tr>
+            </table>
+        </span>
+        <br>
+        <table align="center" style="table-layout: fixed; width: 75%">
+            <tr>
+                <th>
+                    <table>
+                        <tr>
+                            <th style="font-size: 30px; font-style: italic;  color: springgreen">
+                                Add Properties
+                            </th>
+                            <form action="/osagent/os_agent_save_property/" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <tr>
+                                    <th>
+                                        <input  id="inpt" type="text" name="pname" required class="un"
+                                                placeholder="Property Owner" style="height: 25px" >
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <textarea name="plocation" placeholder="Property Location" required
+                                                  class="un" style="height: 25px;"></textarea >
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="number" name="psize" required  class="un"
+                                                  placeholder="Property Area(In Sq.Feet)" style="height: 25px"></textarea>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="decimal" name="pprice" placeholder="Property Price" required
+                                               class="un" style="height: 25px; ">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="text" name="pfacing" placeholder="Facing" required
+                                               class="un" style="height: 25px">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="text" name="pcomment" placeholder="Comment"
+                                                  required class="un" style="height: 25px">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Property Photo<br>
+                                        <input type="file" name="pphoto" required class="un" style="height: 25px">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <button type="submit" style="width: 100px; height: 35px; border-radius: 5px"
+                                                class="un">SAVE</button>
+                                    </th>
+                                </tr>
+                            </form>
+                        </tr>
+                    </table>
+                </th>
+                <th>
+                    <table style="display: block;overflow-y:scroll;height: 365px; color: gray;background:white;color:
+                    crimson;border-radius: 30px;font-weight: bolder;border: transparent;border-collapse: collapse;
+                        width: 146%; margin-left: -229px;" class="uptstl" >
+                        <tr style="background: lightgray;" >
+                            <th colspan="11" style="font-size: 30px; font-style: italic;  color: darkblue;">
+                                Properties Details
+                            </th>
+                        </tr>
+                        <tr class="all" style="position: sticky; z-index: 10;border-radius: 10px;border: 0px solid;font-size: 16px">
+                            <th class="all uni" style="background:red;border: none;color:darkblue;">Pro. No. </th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Pro. Name </th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Pro. Location</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Pro. Ttl. Area</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Pro. Price</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Pro. Facing</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Comment</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Add Dt.</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Agent</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Pro. Photo</th>
+                            <th class="all uni" style="background: red;border: none;color: darkblue;">Operations</th>
+                        </tr>
+                        {% for x in data %}
+                                <tr class="all uni" style="overflow: -moz-scrollbars-vertical; z-index: 5;border: none;font-size: 13px;font-weight: bold;">
+                                    <th class="all uni">{{ x.p_no }}</th>
+                                    <th class="all uni" style="word-break: break-all">{{ x.p_name }}</th>
+                                    <th class="all uni">{{ x.p_location }}</th>
+                                    <th class="all uni">{{ x.p_size }}</th>
+                                    <th class="all uni">{{ x.p_prize }}</th>
+                                    <th class="all uni">{{ x.p_facing }}</th>
+                                    <th class="all uni">{{ x.p_comment }}</th>
+                                    <th class="all uni">{{ x.p_add_date }}</th>
+                                    <th class="all uni">{{ x.p_agent_un.ag_username }}</th>
+                                    <th class="all uni"><img class="all uni" src="{{ x.p_photo.url }}" width="100px"
+                                                              height="100px"></th>
+                                    <th>
+                                        <form action="/osagent/os_agent_property_update/" method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" value="{{ x.p_no }}" name="pno">
+                                            <button type="submit" style="font-weight: bold;background: transparent;border: none; ">
+                                                <img src="{% static 'images/update.gif' %}" width="50px" height="20px">
+                                            </button>
+                                        </form>
+                                        <a href="/osagent/os_agent_property_delete/?pno={{ x.p_no }}">
+                                            <img src="{% static 'images/delete.gif' %}" width="75px" height="75px" >
+                                        </a>
+                                    </th>
+                                </tr>
+                        {% endfor %}
+                    </table>
+                </th>
+            </tr>
+        </table>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+            {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+

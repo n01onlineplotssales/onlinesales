@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Menu Page</title>
+    <style>
+        .menu_stl{ width: 1000px; height: 40px; background: gainsboro; color: crimson; font-weight: bold;
+            border-radius: 10px;}
+        .menu_stl:hover{height: 40px; background: crimson; color: white; font-weight: inherit; border-radius: 50%;
+            font-family: Arial Black;}
+        a{color: crimson; font-weight: bold; text-decoration: none}
+        a:hover{color: white; font-weight: bold; font-family: "Arial Black"}
+    </style>
+</head>
+<body>
+    <table align="center" class="menu_stl">
+        <tr class="table" class="menu_stl">
+            <th class="menu_stl">
+                <a href="/osclient/os_client_welcome_home/">HOME</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osclient/os_client_view_properties/">ALL PROPERTIES</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osclient/os_client_blocked_properties/">BLOCKED PROPERTIES</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osclient/os_client_home/">LOGOUT</a>
+               <span style="font-size: 25px; text-align: center;display: block;color: black;">
+            <table align="center" style="background: crimson">
+            <tr>
+                <th>
+                       {% for x in data1 %}
+                        <th>
+                            {% if x.c_photo %}
+                            <img src="{{ x.c_photo.url }}" height="40px" width="65px">
+                            {% endif %}
+                        </th>
+                    {% endfor %}
+                </th>
+            </tr>
+            </table>
+        </span>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ContactUS</title>
+</head>
+<body>
+  {% include 'os_main_template/main_title.html' %}
+  {% include 'os_main_template/main_menu.html' %}
+<span style="font-size: 15px; text-align: center;display: block;color: crimson;">
+{#            Welcome Admin: {% for x in data %} {{ x.a_contact_no }} {% endfor %}#}
+    <br>
+    <br>
+    <br>
+        </span>
+        <br>
+        <p style="width: 73%; margin: auto; text-align: -webkit-match-parent">
+            <div style="text-align: center; font-size: 35px; background:yellow;width: 250px;
+               margin: auto;border-radius: 10px; "><a href=""> Contact Us:</a></div>
+            <br>
+            <div align="center" style="color:yellow">
+                <table align="center" border="5">
+                    <tr><th>Created By:</th><td><a href="" style="color: cyan">MR. Sridhar Sangishetti</a></td></tr>
+{#                    <tr><th>Contact No:</th><td><a href="">-</a></td></tr>#}
+                    <tr><th>Email.id:</th><td><a href=""style="color: cyan">n01onlineplotssales@gmail.com</a></td></tr>
+                </table>
+{#                CEO :MR. SRIDHAR SANGISHETTI#}
+{#            <br>#}
+{#                Contact NO: 9347548554#}
+{##}
+{#            <br>#}
+{#                Email ID: sangishettisridhar2@gmail.com#}
+            </div>
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+</body>
+</html>

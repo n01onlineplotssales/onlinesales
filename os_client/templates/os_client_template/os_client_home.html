@@ -1,0 +1,147 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Login Page</title>
+    <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+    <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+</head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_main_template/main_menu.html' %}
+        <br>
+        <br>
+        <table align="center"  width="500px" style="border-collapse: collapse;">
+            <tr>
+{#                <th colspan="25" class="title" style="font-size: 25px"><marquee direction="right">client Login</marquee></th>#}
+                <th colspan="2" class="title"><marquee direction="right">Client Login</marquee></th>
+            </tr>
+            <tr>
+                <th>
+{#                    <table>#}
+{#                        <form action="/osclient/os_client_detail_save/" method="post" enctype="multipart/form-data">#}
+{#                            {% csrf_token %}#}
+{#                            <tr>#}
+{#                                <th>#}
+{#                                    <input  id="inpt" type="text" name="c_name" required class="registration"#}
+{#                                            placeholder="Client Name" style="height: 25px" >#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>#}
+{#                                    <input  id="inpt" type="tel" name="c_contact_no" required class="registration"#}
+{#                                            placeholder="Client Contact Number" maxlength="10" style="height: 25px">#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>#}
+{#                                    <textarea name="c_address" placeholder="Client Address" required#}
+{#                                              class="registration" style="height: 25px"></textarea >#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>#}
+{#                                    <input type="text" name="c_username" required  class="registration"#}
+{#                                              placeholder="Username" style="height: 25px">#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>#}
+{#                                    <input type="password" name="c_password" placeholder="Password" required#}
+{#                                           class="registration" style="height: 25px">#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>Upload Client Photo<br>#}
+{#                                    <input type="file" name="c_photo" required class="registration" style="height: 25px">#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>#}
+{#                                    <input type="submit" style="width: 100px; height: 35px; border-radius: 5px"id="button" value="SAVE" style="height: 45px">#}
+{#                                </th>#}
+{#                            </tr>#}
+{#                        </form>#}
+{#                    </table>#}
+{#                    <table>#}
+{#                        <tr><th><img src="{% static 'client/click-here.gif' %}"></th></tr>#}
+{#                        <tr><th><a href="">New Client Register Here..! </a> </th></tr>#}
+{#                    </table>#}
+{#                </th>#}
+{#                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>#}
+{#                <th></th><th></th><th></th><th></th><th></th><th></th><th></th>#}
+                <th>
+                    <form action="/osclient/os_client_login_check/" method="post" >
+                        {% csrf_token %}
+                        <table align="center" style="border-collapse: collapse;">
+                            <tr>
+                                <th>
+                                    <img src="{% static 'images/client4.gif' %}" height="90px" width="205px" style="border-radius: 10px">
+                                </th>
+                            </tr>
+                            <tr>
+                               <th><input type="text" placeholder="Username" name="username"
+                                          required class="un"></th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input type="password" placeholder="Password" name="pass"
+                                           required class="up">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="{% static 'images/login4.gif' %}"
+                                         width="100px" height="100px" ><br>
+                                    <input type="submit" value="Login"
+                                           required class="bt"><br>
+{#                                    <a href="">New Client Register Here..</a><img src="{% static 'client/click-here.gif' %}">#}
+                                </th>
+{#                            <tr><th>New Client <a href="">Register Here..</a></th></tr>#}
+                            </tr>
+                        </table>
+                    </form>
+                </th>
+                 <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                <th>
+                    <table>
+                        <tr><th><img src="{% static 'client/click-here.gif' %}"></th></tr>
+                        <tr><th><a href="/osclient/os_client_register/" style="font-size: 30px">New Account Register Here...! </a> </th></tr>
+                    </table>
+                </th>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        {% if message %}
+            <br>
+            <div style="background: lightgray; color: crimson; height: 20px; border-radius: 5px; margin: auto;width: 20%;
+                    text-align: center; padding: 2px; ">{{ message }}
+            </div>
+            <br>
+        {% endif %}
+
+        {% for message in messages %}
+            {% if message %}
+                <div align="center" style="font-size: 20px; color: black; text-shadow: 151px -46px 3px black">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+<br>
+        <br>
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

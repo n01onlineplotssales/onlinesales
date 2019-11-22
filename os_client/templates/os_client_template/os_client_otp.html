@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Otp Check</title>
+    <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+    <style>
+        ::placeholder{text-align: center; font-size: 15px}
+    </style>
+</head>
+<body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_main_template/main_menu.html' %}
+        <table align="center"  width="500px">
+            <tr>
+                <th class="title" colspan="2"><marquee direction="right">Enter One Time Password</marquee></th>
+            </tr>
+            <tr>
+                <th>
+                    <img src="{% static 'images/client.gif' %}" width="400px" height="300px" id="a_image">
+                </th>
+                <th>
+                    <form action="/osclient/os_client_otp_check/" method="post">
+                        {% csrf_token %}
+                        <table align="center">
+                            <tr>
+                               <th><input type="number" placeholder="OTP(One Time Password)" name="otp_pass" required
+                                   class="un" style="width:230px "></th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="{% static 'images/login4.gif' %}" width="100px" height="100px" ><br>
+                                    <input type="submit" value="Submit" class="bt"><br>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input type="button" value="Resend OTP" class="bt" style="width: 130px">
+                                </th>
+                            </tr>
+                        </table>
+                    </form>
+                </th>
+            </tr>
+        </table>
+        {% if message %}
+            <span>{{ message }}</span>
+        {% endif %}
+        {% include 'os_main_template/main_footer.html' %}
+</body>
+</html>

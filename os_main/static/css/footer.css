@@ -1,0 +1,14 @@
+#copyright{
+    border: 1px solid;
+    text-align: center;
+    margin: auto;
+    width: 68%;
+    border-radius: 10px;
+    padding: 12px;
+    background: crimson;
+    color: white;
+    font-size: 15px;
+}
+body{
+    background: red;
+}

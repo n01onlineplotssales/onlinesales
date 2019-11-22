@@ -1,0 +1,66 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin: View Properties</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_admin_template/os_admin_menu.html' %}
+        <span style="font-size: 15px; text-align: center;display: block;color: crimson;">
+            Welcome Admin: {% for x in data1 %} {{ x.a_contact_no }} {% endfor %}
+        </span>
+            {% if data %}
+            <table style="display: block;overflow-y:scroll;height: 365px; color: gray;background:white;color:
+                    crimson;border-radius: 18px;font-weight: bolder;border: transparent;border-collapse: collapse;
+                    width:1000px; " class="uptstl" align="center">
+                <tr style="background: lightgray;" >
+                    <th colspan="10" style="font-size: 20px; font-style: italic;  color: crimson;">
+                        Properties Detail
+                    </th>
+                </tr>
+                <tr class="all" style="position: sticky; z-index: 10;font-size: 16px;padding: 2px;">
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. No. </th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. Name </th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. Location</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. Ttl. Area</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. Price</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. Facing</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Comment</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Add Dt.</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Agent</th>
+                    <th class="all uni" style="background: lightgrey;border: none;color: white;border-radius: 0px;width: 100px;">Pro. Photo</th>
+                </tr>
+
+                {% for x in data %}
+                        <tr class="all uni" style="overflow: -moz-scrollbars-vertical; z-index: 5;border: none;font-size: 14px;word-break: break-all;">
+                            <th class="all uni">{{ x.p_no }}</th>
+                            <th class="all uni" style="word-break: break-all">{{ x.p_name }}</th>
+                            <th class="all uni">{{ x.p_location }}</th>
+                            <th class="all uni">{{ x.p_size }}</th>
+                            <th class="all uni">{{ x.p_prize }}</th>
+                            <th class="all uni">{{ x.p_facing }}</th>
+                            <th class="all uni">{{ x.p_comment }}</th>
+                            <th class="all uni">{{ x.p_add_date }}</th>
+                            <th class="all uni">{{ x.p_agent_un.ag_username }}</th>
+                            <th class="all uni"><img class="all uni" src="{{ x.p_photo.url }}" width="100px"
+                                                      height="100px"></th>
+                        </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+

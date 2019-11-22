@@ -1,0 +1,100 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <title>Client Register Page</title>
+    <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+    <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+</head>
+<body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_main_template/main_menu.html' %}
+        <table align="center"  width="500px" style="border-collapse: collapse;">
+            <tr>
+{#                <th colspan="25" class="title" style="font-size: 25px"><marquee direction="right">client Login</marquee></th>#}
+                <th colspan="2" class="title"><marquee direction="right">Client Register Page..</marquee></th>
+            </tr>
+               <tr>
+                <th>
+                    <table>
+                        <form action="/osclient/os_client_detail_save/" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <tr>
+                                <th>
+                                    <input  id="inpt" type="text" name="c_name" required class="un"
+                                            placeholder="Client Name" style="height: 25px" >
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input  id="inpt" type="tel" name="c_contact_no" required class="un"
+                                            placeholder="Client Contact Number" maxlength="10" style="height: 25px">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <textarea name="c_address" placeholder="Client Address" required
+                                              class="un" style="height: 25px"></textarea >
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input type="text" name="c_username" required  class="un"
+                                              placeholder="Username" style="height: 25px">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input type="password" name="c_password" placeholder="Password" required
+                                           class="un" style="height: 25px">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="background: crimson" align="center" class="un">
+                                   Upload Client Photo
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input type="file" name="c_photo" required class="un" style="height: 25px">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                     <button type="submit" style="width: 100px; height: 35px; border-radius: 5px"
+                                                class="un">SAVE</button>
+                                </th>
+                            </tr>{#                            <tr><th><a href="//">New Client Register Here..! </a> </th></tr>#}
+
+                        </form>
+                        <br>
+                      <tr><th><a href="/osclient/os_client/">Click Here TO Login..!</a> </th></tr>
+                    </table>
+{#                    <table>#}
+{#                        <tr><th><img src="{% static 'client/click-here.gif' %}"></th></tr>#}
+{#                        <tr><th><a href="">New Client Register Here..! </a> </th></tr>#}
+{#                    </table>#}
+                </th>
+        </table>
+ <br>
+        <br>
+        {% if message %}
+            <br>
+            <div style="background: lightgray; color: crimson; height: 20px; border-radius: 5px; margin: auto;width: 20%;
+                    text-align: center; padding: 2px;">{{ message }}
+            </div>
+            <br>
+        {% endif %}
+
+        {% for message in messages %}
+            {% if message %}
+                <div align="center" style="font-size: 20px; color: black; text-shadow: 151px -46px 3px black">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+<br>
+        <br>
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+</body>
+</html>

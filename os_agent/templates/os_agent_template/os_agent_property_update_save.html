@@ -1,0 +1,110 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Properties</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_agent_template/os_agent_menu.html' %}
+                <table align="center" style="table-layout: fixed; width: 75%">
+                    <tr>
+                        <th style="font-size: 20px; font-style: italic;  color: crimson">
+                            Update Properties
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            {% for x in data %}
+                    <form action="/osagent/os_agent_property_update_confirm/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <table>
+                        <tr>
+                            <th>
+                                <input  id="inpt" type="number" name="pno" value="{{ x.p_no }}" required class="registration"
+                                        placeholder="Property Owner" readonly style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input  id="inpt" type="text" name="pname" value="{{ x.p_name }}" required class="registration"
+                                        placeholder="Property Owner" style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="text" name="plocation" placeholder="Property Location" required value="{{ x.p_location }}"
+                                          class="registration" style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="number" name="psize" required  class="registration" value="{{ x.p_size }}"
+                                          placeholder="Property Area(In Sq.Feet)" style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="decimal" name="pprice" placeholder="Property Price" required value="{{ x.p_prize }}"
+                                       class="registration" style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="text" name="pfacing" placeholder="Facing" required value="{{ x.p_facing }}"
+                                       class="registration" style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="text" name="pcomment" placeholder="Comment" value="{{ x.p_comment }}"
+                                          required class="registration" style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="text" name="p_add_dt" placeholder="Post Date" value="{{ x.p_add_date }}"
+                                          required class="registration" readonly style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="text" placeholder="Agent Name" value="{{ x.p_agent_un_id }}"
+                                          required class="registration" readonly style="height: 15px">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Property Photo<br>
+                                <input type="file" name="pphoto" value="{{ x.p_photo.url }}" required class="registration"
+                                style="height: 20px; ">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="submit" style="width: 100px; height: 25px; border-radius: 5px"
+                                       id="button" value="SAVE">
+                            </th>
+                        </tr>
+                        </table>
+                    </form>
+                    {% endfor %}
+                        </th>
+                        <th>
+                            <img src="{{ object.p_photo.url }}">
+                        </th>
+                    </tr>
+            </table>
+            {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+

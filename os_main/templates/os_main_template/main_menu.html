@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu Page</title>
+    <style>
+        .menu_stl{ width: 1380px; height: 40px; background:blanchedalmond; color: crimson; font-weight: bold;
+            border-radius: 10px;}
+            .menu_stl:hover{height: 40px; background:blueviolet; color: white; font-weight: inherit; border-radius: 50%;
+            font-family: Arial Black;}
+        a{color: crimson; font-weight: bold; text-decoration: none}
+        a:hover{color: white; font-weight: bold; font-family: "Arial Black"}
+    </style>
+</head>
+<body background="{% static 'property/istockphoto-2.jpg' %}">
+    <table align="center" class="menu_stl">
+        <tr class="table" class="menu_stl">
+            <th class="menu_stl">
+                <a href="">HOME</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osadmin/os_admin/?">ADMIN</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osagent/os_agent/?">AGENT</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osclient/os_client/?">CLIENT</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/os_main_about_us/?">ABOUT US</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/os_main_contactus/?">CONTACT US</a></th>
+        </tr>
+    </table>
+</body>
+</html>
+

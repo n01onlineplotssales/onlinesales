@@ -1,0 +1,70 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Properties</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_agent_template/os_agent_menu.html' %}
+        <table align="center" style="table-layout: fixed; width: 75%">
+            <tr>
+                <th>
+                    <table>
+                        <tr>
+                            <th style="font-size: 20px; font-style: italic;  color: crimson">
+                                Property Delete Confirmation
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Property No. :<input id="inpt" type="text" name="pno" value="{{ object.p_no }}" class="registration"
+                                >
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Property Name :<input id="inpt" type="text" name="pname" value="{{ object.p_name }}" class="registration"
+                                >
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <img src="{{ object.p_photo.url }}" class="registration" >
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                               <form method="post">
+                                   {% csrf_token %}
+                                   <button type="submit">Yes</button>
+                               </form>
+                            </th>
+                            <th>
+                               <form action="/osagent/os_agent_new_properties/">
+                                   {% csrf_token %}
+                                   <button type="submit">No</button>
+                               </form>
+                            </th>
+                        </tr>
+                    </table>
+                </th>
+            </tr>
+        </table>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+            {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+
+

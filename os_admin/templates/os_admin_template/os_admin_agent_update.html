@@ -1,0 +1,78 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Agent Registration Page</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+    </head>
+    <body>
+            {% include 'os_main_template/main_title.html' %}
+            {% include 'os_admin_template/os_admin_menu.html' %}
+
+        <form action="/osadmin/os_admin_save_agent/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table align="center" style="color: lightgrey;" >
+            <tr>
+                <th colspan="5" style="font-size: 30px; font-family: 'Arial Black';text-shadow: -4px -2px 7px crimson;
+                text-align: center;">Update Details</th>
+            </tr>
+            {% for x in data %}
+            <tr>
+                <th align="left">Agent No.<br>
+                    <input  id="inpt" type="number" name="agent_no" required class="registration" value={{ x.ag_no }}
+                            readonly style="height: 15px">
+                </th>
+            </tr>
+            <tr>
+                <th align="left">Agent Name<br>
+                    <input type="text" name="agent_name" value="{{ x.ag_name }}" required class="registration" style="height: 15px">
+                </th>
+            </tr>
+            <tr>
+                <th align="left">Agent Address<br>
+                    <input type="text" name="agent_address" value="{{ x.ag_address }}" required  class="registration" style="height: 15px">
+                </th>
+            </tr>
+            <tr>
+                <th align="left">Agent Contact No.<br>
+                    <input type="number" name="agent_contact" value="{{ x.ag_contact_no }}" required class="registration" style="height: 15px">
+                </th>
+            </tr>
+            <tr>
+                <th align="left">Agent Username<br>
+                    <input type="text" name="agent_username" value="{{ x.ag_username }}" required class="registration" readonly style="height: 15px" >
+                </th>
+            </tr>
+            <tr>
+                <th align="left">Agent Password<br>
+                    <input type="password" name="agent_password" value="{{ x.ag_password }}" required class="registration" style="height: 15px">
+                </th>
+            </tr>
+            <tr>
+                <th align="left">Agent Photo<br>
+                    <input type="file" name="agent_photo" value="{{ x.ag_photo.url }}" class="registration" required style="height: 20px;padding: 5px">
+{#                    <img src="{{ x.ag_photo.url }}" width="50px" height="50px">#}
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="submit" style="width: 100px; height: 35px; border-radius: 5px;text-align: center;" id="button" value="SAVE">
+                </th>
+            </tr>
+            {% endfor %}
+        </table>
+        </form>
+            {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+
+

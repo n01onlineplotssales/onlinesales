@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Home Slider</title>
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">#}
+{#    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">#}
+    <style>
+        {#.mySlides {display:none;}#}
+    </style>
+    </head>
+    <body>
+{#        <h2 class="w3-center"></h2>#}
+
+        <div class="w3-content w3-section" align="center">
+          <img class="mySlides" src="{% static 'images/sl1.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl2.png' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+            <img class="mySlides" src="{% static 'images/sl3.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl4.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl5.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl6.jpeg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl7.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl8.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl9.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl10.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl11.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl12.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl13.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl14.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl15.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+          <img class="mySlides" src="{% static 'images/sl16.jpg' %}" style="height: 360px;width: 790px; border-radius: 10px;">
+        </div>
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+
+    </body>
+</html>

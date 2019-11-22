@@ -1,0 +1,130 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Block Properties</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_agent_template/os_agent_menu.html' %}
+        <br>
+       <span style="font-size: 25px; text-align: center;display: block;color: springgreen;">
+            <table align="center" style="background: crimson">
+            <tr>
+                <th>
+                    Welcome Agent:
+                    {% for x in data1 %}
+                        {{ x.ag_name }}
+                        <th>
+                            {% if x.ag_photo  %}
+                            <img src="{{ x.ag_photo.url }}" height="50px" width="65px">
+                            {% endif %}
+                        </th>
+                    {% endfor %}
+                </th>
+            </tr>
+            </table>
+        </span>
+        <br>
+            {% if data %}
+                <div>
+                <table style="margin: auto;table-layout: fixed;">
+                    <tr>
+                        <th>
+                        <table style="display: block;color:gray;background:white;color:crimson;border-radius: 20px;
+                                font-weight: bolder;border:transparent; width: 86%;margin: auto; height: 250px;
+                                overflow: scroll;"  class="uptstl">
+                            <tr style="background: lightgray;" >
+                                <th colspan="10" style="font-size: 30px; font-style: italic;  color: crimson; border-radius:
+                                                        5px">
+                                    Block Properties
+                                </th>
+                            </tr>
+                            <tr class="all" style="border-radius: 5px;border: 0px solid;font-size: 15px;">
+                                <th class="all uni" style="background: lightgrey;border: none;color: darkblue;width: 100px;border-radius: 5px;">Pro. No. </th>
+                                <th class="all uni" style="background: lightgrey;border: none;color: darkblue;width: 100px;border-radius: 5px;">Pro. Name </th>
+                                <th class="all uni" style="border-radius: 5px;;background: lightgrey;border: none;color: darkblue;width: 100px;border-radius: 5px;">Pro. Location</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Pro. Ttl. Area</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Pro. Price</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Pro. Facing</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Comment</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Post Dt.</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Pro. Photo</th>
+                                <th class="all uni" style="border-radius: 5px;background: lightgrey;border: none;color: darkblue;width: 100px;">Operations</th>
+                            </tr>
+                            {% for y in data %}
+                                {% for x in y %}
+                                    <tr class="all uni" style=";border:none;font-size: 13px;font-weight: bold;">
+                                        <th class="all uni">{{ x.b_property_no.p_no }}</th>
+                                        <th class="all uni" style="word-break: break-all">{{ x.b_property_no.p_name }}</th>
+                                        <th class="all uni">{{ x.b_property_no.p_location }}</th>
+                                        <th class="all uni">{{ x.b_property_no.p_size }}</th>
+                                        <th class="all uni">{{ x.b_property_no.p_prize }}</th>
+                                        <th class="all uni">{{ x.b_property_no.p_facing }}</th>
+                                        <th class="all uni">{{ x.b_property_no.p_comment }}</th>
+                                        <th class="all uni">{{ x.b_property_no.p_add_date }}</th>
+                                        <th class="all uni"><img class="all uni" src="{{ x.b_property_no.p_photo.url }}"
+                                              width="100px" height="100px"></th>
+                                        <th>
+                                            <a style="font-size: 12px; font-style: italic;  color: crimson;"
+                                               href="/osagent/os_agent_sold_property/?p_no={{ x.b_property_no.p_no }}
+                                               &client_un={{ x.b_client_un_id }}">
+                                                SOLD PROPERTY
+                                            </a>
+                                        </th>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                        </table>
+                        </th>
+                    </tr>
+                </table>
+                    <table align="center" style="color: crimson;table-layout: fixed;margin: auto; width: 74.5%;overflow: scroll;
+                          " class="uptstl" >
+                        <tr class="all uni" >
+                            <th colspan="2" class="all uni" style="font-size: 20px;border-radius: 5px; font-style: italic;  color: crimson;background: lightgray">
+                                Blocked Client Details
+                            </th>
+                        </tr>
+                        <tr >
+                            <th class="all uni" style="background: lightgray;color: white;font-size: 15px;border-radius: 5px;">
+                                Client Name
+                            </th>
+                            <th class="all uni" style="background: lightgray;color: white;font-size: 15px;border-radius: 5px;">
+                                Client Contact Number
+                            </th>
+                        </tr>
+                        {% for y in data %}
+                            {% for x in y %}
+                                <tr class="all">
+                                    <th style="color:crimson;font-size: 13px;" >
+                                        {{ x.b_client_un.c_name }}
+                                    </th>
+                                    <th style="color:crimson;font-size: 13px;">
+                                        {{ x.b_client_un.c_contact_no }}
+                                    </th>
+                                </tr>
+                            {% endfor %}
+                        {% endfor %}
+                    </table>
+            {% else %}
+                <br>
+                <div style="color: crimson; font-size: small;text-align: center;font-style: italic;" >
+                    <div style="color:crimson;font-size: 20px; font-weight: bold">No Blocked Plots</div>
+                    <img src="{% static 'images/login3.gif' %}" height="330px" width="400px">
+                </div>
+            {% endif %}
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+

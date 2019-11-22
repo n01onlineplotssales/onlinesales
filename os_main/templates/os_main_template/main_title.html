@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page Title</title>
+    <link href="{% static 'css/title.css' %}">
+</head>
+<body background="{% static 'property/istockphoto-2.jpg' %}">
+    <table align="center">
+        <tr>
+            <th><img src="{% static 'images/3.gif' %}" style="height: 250px; width: 300px; border-radius: 10px;display: block;"></th>
+            <th  style="font-size: 115px; color:greenyellow;font-family:-moz-fixed">Online Plot Sales</th>
+            <th><img src="{% static 'images/day-and-night.gif' %}" style="height: 250px; width: 300px; border-radius: 10px;display: block;"></th>
+        </tr>
+    </table>
+</body>
+</html>

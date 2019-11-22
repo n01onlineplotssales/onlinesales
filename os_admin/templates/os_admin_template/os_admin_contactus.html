@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin: About us</title>
+</head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_admin_template/os_admin_menu.html' %}
+        <span style="font-size: 15px; text-align: center;display: block;color: crimson;">
+            Welcome Admin: {% for x in data %} {{ x.a_contact_no }} {% endfor %}
+        </span>
+        <br>
+        <p style="width: 73%; margin: auto; text-align: -webkit-match-parent">
+            <div style="text-align: center; font-size: 15px; background: lightgray;width: 150px;
+               margin: auto;border-radius: 10px; ">About Us:</div>
+
+            <div align="center" style="color: crimson">
+                Submited By:
+                Er. Ritesh Shroff
+            <br>
+                Guided By:
+                Mr. Naveen Kumar ()
+            <br>
+                www.sathyatech.com
+            </div>
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>

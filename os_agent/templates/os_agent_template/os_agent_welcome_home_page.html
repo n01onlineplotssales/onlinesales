@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent: Welcome Agent</title>
+</head>
+<body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_agent_template/os_agent_menu.html' %}
+       <span style="font-size: 25px; text-align: center;display: block;color: springgreen;">
+            <table align="center" style="background: crimson">
+            <tr>
+                <th>
+                    Welcome Agent:
+                    {% for x in data1 %}
+                        {{ x.ag_name }}
+                        <th>
+                            {% if x.ag_photo  %}
+                            <img src="{{ x.ag_photo.url }}" height="50px" width="65px">
+                            {% endif %}
+                        </th>
+                    {% endfor %}
+                </th>
+            </tr>
+            </table>
+        </span>
+        {% include "os_main_template/slider.html" %}
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+</body>
+</html>

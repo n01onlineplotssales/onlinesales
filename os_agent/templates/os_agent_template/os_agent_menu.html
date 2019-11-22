@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Menu Page</title>
+    <style>
+        .menu_stl{ width: 1000px; height: 40px; background: gainsboro; color: crimson; font-weight: bold;
+            border-radius: 10px;}
+        .menu_stl:hover{height: 40px; background: crimson; color: white; font-weight: inherit; border-radius: 50%;
+            font-family: Arial Black;}
+        a{color: crimson; font-weight: bold; text-decoration: none}
+        a:hover{color: white; font-weight: bold; font-family: "Arial Black"}
+    </style>
+</head>
+<body>
+    <table align="center" class="menu_stl">
+        <tr class="table" class="menu_stl">
+            <th class="menu_stl">
+                <a href="/osagent/os_agent_welcome_home_page/">HOME</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osagent/os_agent_new_properties/">NEW PROPERTIES</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osagent/os_agent_block_property/">BLOCKED PROPERTY</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osagent/os_agent_view_sold_property/">SOLD PROPERTY</a>
+            </th>
+            <th class="menu_stl">
+                <a href="/osagent/os_agent_logout/">LOGOUT</a>
+                <span style="font-size: 25px; text-align: center;display: block;color: springgreen;">
+
+                    {% for x in data1 %}
+                        {{ x.ag_name }}
+                        <th>
+                            {% if x.ag_photo  %}
+                            <img src="{{ x.ag_photo.url }}" height="50px" width="65px">
+                            {% endif %}
+
+                    {% endfor %}
+
+        </span>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
+

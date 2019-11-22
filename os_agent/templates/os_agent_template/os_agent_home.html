@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent: Agent Login</title>
+    <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+</head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_main_template/main_menu.html' %}
+
+        <table align="center"  width="500px" style="border-collapse: collapse;">
+            <tr >
+                <th colspan="2" class="title"><marquee direction="right">Agent Login</marquee></th>
+            </tr>
+            <tr>
+                <th>
+                    <img src="{% static 'images/agentlogin.gif' %}" width="400px" height="300px" id="a_image">
+                </th>
+                <th>
+                    <form action="/osagent/os_agent_login_check/" method="post">
+                        {% csrf_token %}
+                            <table align="center" style="border-collapse: collapse;">
+                                <tr>
+                                   <th><input type="text" placeholder="Username" name="username"
+                                              required class="un"></th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="password" placeholder="Password" name="pass"
+                                               required class="up">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <img src="{% static 'images/login4.gif' %}"
+                                             width="100px" height="100px" ><br>
+                                        <input type="submit" value="Login"
+                                               required class="bt">
+                                    </th>
+                                </tr>
+                            </table>
+                    </form>
+                </th>
+            </tr>
+        </table>
+        {% for message in messages %}
+            {% if message %}
+                <div align="center" style="font-size: 20px; color: black; text-shadow: 151px -46px 3px black">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>

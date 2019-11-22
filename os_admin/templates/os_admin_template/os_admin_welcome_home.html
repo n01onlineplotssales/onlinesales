@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin: Admin Home</title>
+</head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_admin_template/os_admin_menu.html' %}
+        <span style="font-size: 15px; text-align: center;display: block;color: crimson;">
+            Welcome Admin: {% for x in data %} {{ x.a_contact_no }} {% endfor %}
+        </span>
+        {% include 'os_main_template/slider.html' %}
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>

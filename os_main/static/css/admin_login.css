@@ -1,0 +1,15 @@
+
+
+
+.title{font-size: 50px; text-align: center; color:deeppink }
+#a_image{transition: transform 1s;}
+#a_image:hover {transform: rotate(10deg); height:300px }
+::placeholder {color: white}
+.un,.up{ background: crimson; border-radius: 10px; padding: 5px; font-weight: bold; font-family: "Arial Black"}
+.un:hover{ background: rgb(0,57,92); border-radius: 10px; padding: 5px; font-weight: bold; font-family: "Arial Black";
+    width: 205px; color: crimson;}
+.up:hover{ background: rgb(0,57,92); border-radius: 10px; padding: 5px; font-weight: bold; font-family: "Arial Black";
+    width: 205px;color: crimson;}
+.bt{background: crimson; width: 80px; height: 30px; border-radius: 10px; color: white; font-weight: bold}
+.bt:hover{background: rgb(0,57,92); width:90px; height: 35px; border-radius: 10px; ; font-weight:
+        bold; font-family: "Arial Black"; }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin: About us</title>
+</head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_admin_template/os_admin_menu.html' %}
+        <br>
+        <span style="font-size: 25px; text-align: center;display: block;color: black;">
+            <table align="center" style="background: crimson"><tr><th>  Welcome Admin: {% for x in data %} {{ x.a_contact_no }} {% endfor %}  </th></tr></table>
+        </span>
+        <br>
+        <br>
+        <p style="width: 73%; margin: auto; text-align: -webkit-match-parent">
+            <div style="text-align: center; font-size: 35px; background: lightgray;width: 230px;
+               margin: auto;border-radius: 10px; ">About Us:</div>
+        <br><br>
+
+            <div align="center" style="color: black">
+
+                <table style="background: crimson"><tr><th>
+                Created By:
+                Sridhar Sangishetti
+            <br>
+                Guided By:
+                Mr. Naveen Kumar ()
+            <br>
+                www.N01onlineopenplotsales.com</th></tr></table>
+            </div>
+        <br>
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>

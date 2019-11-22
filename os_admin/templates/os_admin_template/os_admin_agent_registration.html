@@ -1,0 +1,138 @@
+{% load staticfiles %}
+{% if request.session.status %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin: Agent Registration</title>
+        <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+         <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'os_main_template/main_title.html' %}
+        {% include 'os_admin_template/os_admin_menu.html' %}
+        <span style="font-size: 25px; text-align: center;display: block;color: black;">
+            <table align="center" style="background: #ff0350">
+                <tr><th>Welcome Admin:{% for x in data1 %}
+                {{ x.a_contact_no }}
+            {% endfor %}</th></tr>
+            </table>
+
+        </span>
+        <table align="center">
+            <tr>
+                <th>
+                    <table>
+                        <tr>
+                            <th style="font-size: 35px; font-style: italic;  color: springgreen">
+                                Agent Registraion
+                            </th>
+                            <form action="/osadmin/os_admin_save_agent/" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <tr>
+                                    <th>
+                                        <input  id="inpt" type="number" name="agent_no" required class="un"
+                                                placeholder="Agent No." style="height: 25px;">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="text" name="agent_name" placeholder="AGENT NAME" required
+                                              style="height: 25px;" class="un">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <textarea name="agent_address" required class="un"
+                                                   style="height: 25px;" placeholder="ADDRESS"></textarea>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="number" name="agent_contact" placeholder="CONTACT NO." required
+                                               style="height: 25px;" class="un">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="text" name="agent_username" placeholder="USERNAME" required
+                                                style="height: 25px;" class="un">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="password" name="agent_password" placeholder="PASSWORD" required
+                                                 style="height: 25px;" class="un">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="font-size: 20px; font-style: italic;  color:springgreen">PHOTO</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input type="file" name="agent_photo" required  style="height: 22px;padding: 5px"
+                                               class="un">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+{#                                        <input type="submit" style="width: 100px; height: 35px; border-radius: 5px" id="button" value="SAVE" class="bt">#}
+                                        <input type="submit" value="Login" required class="bt">
+                                    </th>
+                                </tr>
+                            </form>
+                    </table>
+                </th>
+                <th>
+                    <table style="display: block;overflow-y:scroll;height: 365px; color: gray;background:darksalmon;color:
+                            crimson;border-radius: 20px;font-weight: bolder;border: transparent;border-collapse:
+                            collapse; table-layout: fixed; width: 730px;" class="uptstl" >
+                        <tr><th></th></tr>
+                        <tr><th></th></tr>
+                        <tr style="background: lightgray;">
+                            <th colspan="6" style="font-size: 30px; font-style: italic;  color: darkblue;">Agent Details</th>
+                        </tr> <tr><th></th></tr>
+                        <tr class="all" style="border-radius: 10px;border: 0px solid; font-size: 16px">
+                            <th class="all uni" style="background: lightgrey;border: none;color: darkblue;">Agent no.</th>
+                            <th class="all uni" style="background: lightgrey;border: none;color: darkblue;width: 150px">Agent Name</th>
+                            <th class="all uni" style="background: lightgrey;border: none;color: darkblue;">Agent Contact</th>
+                            <th class="all uni" style="background: lightgrey;border: none;color: darkblue;width: 170px">Agent Address</th>
+                            <th class="all uni" style="background: lightgrey;border: none;color: darkblue;">Agent Photo</th>
+                            <th class="all uni" style="background: lightgrey;border: none;color: darkblue;">Update & Delete</th>
+                        </tr>
+                        {% for x in data %}
+                                <tr class="all uni" style="overflow: -moz-scrollbars-vertical; z-index: 5;border: none;">
+                                    <th class="all uni" >{{ x.ag_no }}</th>
+                                    <th class="all uni">{{ x.ag_name }}</th>
+                                    <th class="all uni">{{ x.ag_contact_no }}</th>
+                                    <th class="all uni">{{ x.ag_address }}</th>
+                                    <th class="all uni"><img class="all uni" src="{{ x.ag_photo.url }}" width="130px"
+                                                              height="100px"></th>
+                                    <th style="">
+                                        <form action="/osadmin/os_admin_agent_update/" method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" value="{{ x.ag_username }}" name="username">
+                                            <button type="submit" style="background: crimson; color: white;border-radius:5px; ">Update</button><br><br>
+                                        </form>
+                                        <a href="/osadmin/os_admin_agent_delete/?idno={{ x.ag_no }}"><button type="button" style="background: crimson; color: white;border-radius:5px; ">Delete</button></a>
+                                    </th>
+                                </tr>
+                        {% endfor %}
+                    </table>
+                </th>
+            </tr>
+        </table>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        {% include 'os_main_template/main_footer.html' %}
+    </body>
+</html>
+{% else  %}
+    <span style="text-align: center;">Pease Login Aagain</span>
+{% endif %}
+
+
+
+
+
+
